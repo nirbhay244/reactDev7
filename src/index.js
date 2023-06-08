@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+function A(props){
+  return <h1>Hello Nirbhay {props.surname} <B location={"from A"}/> </h1>
+  
+}
+
+function B(props){
+  let b = 'B'
+  return <h1>This is component {b} {props.location}</h1>
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
+let sn = "Singh";
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  
+   <A surname={sn}/>
+  
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
